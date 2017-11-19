@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Career Choice</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+.parent {
+  text-align: center;
+}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 {
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 {
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 {
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+.mailto{
+  display:block;
+  width:100px;
+  height:20px;
+}
+  </style>
+</head>
+<body>
+{% load static%}
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+      </button>
+      <a class="navbar-brand" href="#">Career Choice</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="mailto" href="mailto:sahajsinghsachdeva@gmail.com">Contact Us</a></li>
+
+        </ul>
+    </div>
+  </div>
+</nav>
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Career Choice</h3>
+  <img src="{% static 'stream_select/Star.png' %}" class="img-responsive margin img-circle margin" style="display:inline" alt="Image" width="350" height="350">
+  <h3>HOW DO I CHOOSE THE RIGHT CAREER?</h3>
+<p>Get answers to all these questions and much more.
+CareerChoice brings to you scientific and meticulously designed Psychometric Career Assessment to discover your true potential and interest.</p>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2  text-center">
+  <h3 class="margin">WHAT CAREER SHOULD I CHOOSE?</h3>
+<p>
+Which career stream should I choose ?</p>
+<p>What to do after 10th or 12th ?</p>
+<p>There are so many options which is right for me ?</p>
+<p>Should I follow my family legacy ?</p>
+<p>Am I a right fit to pursue science or should I choose commerce or arts ?</p>
+<p>Do I have what it takes to be ...........?</p>
+<p>Should I follow the advices of my relatives or friends ?</p>
+<p>Is ........... the only professions in the world ?
+
+
+</p>
+  <a href="{% url 'stream_select:ques' %}" class="slide_page">
+    Get Started
+  </a>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">
+  <h3 class="margin">Who Are We?</h3><br>
+  <div class="row">
+    <div class="col-sm-2" >
+<img src="{% static 'stream_select/Sahaj.jpg' %}" class="img-responsive margin" style="width:100%" alt="Image">
+<p>Sahaj Singh Sachdeva</p>
+<p> BML Munjal University</p>
+      <p> +91  857 00 22 540</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="{% static 'stream_select/Mayank.jpg' %}" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>Mayank Jindal</p>
+<p> BML Munjal University</p>
+<p> +91  868 90 48 490</p>
+
+    </div>
+    <div class="col-sm-2">
+      <img src="{% static 'stream_select/Divyanshu.jpg' %}" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>Divyanshu Gupta</p>
+<p> BML Munjal University</p>
+<p> +91  857 10 25 499</p>
+
+    </div>
+
+    <div class="col-sm-2">
+      <img src="{% static 'stream_select/akshat.jpg' %}" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>Akshat Bhandari</p>
+<p> BML Munjal University</p>
+<p> +91  981 12 06 343</p>
+
+    </div>
+    <div class="col-sm-2">
+      <img src="{% static 'stream_select/AGL.jpg' %}" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>Akshay Garg</p>
+<p> BML Munjal University</p>
+<p> +91  857 19 67 954</p>
+
+    </div>
+     <div class="col-sm-2">
+      <img src="{% static 'stream_select/akshay.jpg' %}" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>Akshay Goswami</p>
+<p> BML Munjal University</p>
+<p> +91  989 98 62 470</p>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Brought to you by CAREER CHOICE  &nbsp;    <span style="font-size:200%;color:red;">&hearts;</span> &nbsp; </p>
+<div class="copyright">
+&copy; 2017, BML Munjal University, All rights reserved
+</div>
+</footer>
+
+</body>
+</html>
