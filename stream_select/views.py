@@ -1,4 +1,5 @@
 import matplotlib
+matplotlib.use("Agg")
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 import matplotlib.pyplot as plt
