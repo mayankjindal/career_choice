@@ -1,9 +1,10 @@
 import matplotlib
 matplotlib.use("Agg")
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
 import matplotlib.pyplot as plt
 import numpy as np
+from io import BytesIO
+import base64
 from django.core.urlresolvers import reverse
 
 op1, op2, op3, op4, op5, op6, op7, op8, op9, op10, op11, op12, op13, op14, op15, op16, op17 = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -76,12 +77,14 @@ def calc(request):
                'computer' : val[4], 'software':val[5]
                }
     print(context)
+    fig = plt.figure()
     y_bos = np.arange(len(streams))
     plt.bar(y_bos, val, align='center', alpha = 0.5)
     plt.xticks(y_bos, streams)
     plt.ylabel('Usage')
     plt.title('Result')
-
-    plt.savefig('stream_select/static/stream_select/graph.png')
+    img = BytesIO()
+    fig.savefig(img, format='png')
+    context['graph'] = base64.b64encode(img.getvalue())
     return render(request, template, context)
 
